@@ -58,3 +58,26 @@ _____________________________________________ Question 1________________________
 //  var  daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 //  alert(`Number of days past since 1st Ramadan (June 18, 2015): ${daysDifference}`);
 
+
+var customerName = "ABC Customer";
+
+      var months = ["January", "February", "March", "April", "May", "June",
+                      "July", "August", "September", "October", "November", "December"];
+        var currentDate = new Date();
+        var currentMonth = months[currentDate.getMonth()];
+        var numberOfUnits = 250;
+        var chargesPerUnit = 10.75;
+        var latePaymentSurcharge = 150.00;
+
+        var netAmountPayable = (numberOfUnits * chargesPerUnit).toFixed(2);
+
+        var grossAmountPayable = (parseFloat(netAmountPayable) + latePaymentSurcharge).toFixed(2);
+
+        document.write(`<h1>K-Electric Bill</h1>`);
+        document.write(`<p><strong>Customer Name:</strong> ${customerName}</p>`);
+        document.write(`<p><strong>Current Month:</strong> ${currentMonth}</p>`);
+        document.write(`<p><strong>Number of units:</strong> ${numberOfUnits}</p>`);
+        document.write(`<p><strong>Charges per unit:</strong> ${chargesPerUnit.toFixed(2)}</p>`);
+        document.write(`<p><strong>Net Amount Payable (within Due Date):</strong> ${netAmountPayable}</p>`);
+        document.write(`<p><strong>Late Payment Surcharge:</strong> ${latePaymentSurcharge.toFixed(2)}</p>`);
+        document.write(`<p><strong>Gross Amount Payable (after Due Date):</strong> ${grossAmountPayable}</p>`);
